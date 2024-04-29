@@ -73,9 +73,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                     runOnUiThread {
                         setupThemes()
                         val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations) && !isThankYou
-                        binding.applyToAllHolder.beVisibleIf(
-                            storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations
-                        )
+//                        binding.applyToAllHolder.beVisibleIf(
+//                            storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations
+//                        )
                     }
                 } catch (e: Exception) {
                     toast(R.string.update_thank_you)
@@ -96,9 +96,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(textColor)
         originalAppIconColor = baseConfig.appIconColor
 
-        if (resources.getBoolean(R.bool.hide_google_relations) && !isThankYou) {
-            binding.applyToAllHolder.beGone()
-        }
+//        if (resources.getBoolean(R.bool.hide_google_relations) && !isThankYou) {
+//            binding.applyToAllHolder.beGone()
+//        }
     }
 
     override fun onResume() {
@@ -211,9 +211,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        if (binding.customizationTheme.value == getMaterialYouString()) {
-            binding.applyToAllHolder.beGone()
-        }
+//        if (binding.customizationTheme.value == getMaterialYouString()) {
+//            binding.applyToAllHolder.beGone()
+//        }
     }
 
     private fun themePickerClicked() {
@@ -235,9 +235,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations) && !isThankYou
-            binding.applyToAllHolder.beVisibleIf(
-                curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
-            )
+//            binding.applyToAllHolder.beVisibleIf(
+//                curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
+//            )
 
             updateMenuItemColors(binding.customizationToolbar.menu, getCurrentStatusBarColor())
             setupToolbar(binding.customizationToolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
@@ -606,7 +606,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
 
                 baseConfig.wasSharedThemeEverActivated = true
-                binding.applyToAllHolder.beGone()
+//                binding.applyToAllHolder.beGone()
                 updateColorTheme(THEME_SHARED)
                 saveChanges(false)
             }
