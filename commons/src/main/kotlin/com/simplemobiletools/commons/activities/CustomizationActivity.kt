@@ -56,7 +56,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         updateMaterialActivityViews(binding.customizationCoordinator, binding.customizationHolder, useTransparentNavigation = true, useTopSearchMenu = false)
 
-        isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"
+        isThankYou = true
         initColorVariables()
 
         if (isThankYouInstalled()) {
@@ -543,11 +543,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        if (!packageName.startsWith("com.simplemobiletools.", true) && baseConfig.appRunCount > 50) {
-            finish()
-            return
-        }
-
         curPrimaryLineColorPicker = LineColorPickerDialog(this, curPrimaryColor, true, toolbar = binding.customizationToolbar) { wasPositivePressed, color ->
             curPrimaryLineColorPicker = null
             if (wasPositivePressed) {

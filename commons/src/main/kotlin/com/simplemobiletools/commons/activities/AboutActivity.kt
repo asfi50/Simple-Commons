@@ -130,11 +130,7 @@ class AboutActivity : ComponentActivity() {
         val separator = "------------------------------"
         val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
 
-        val address = if (packageName.startsWith("com.simplemobiletools")) {
-            getString(R.string.my_email)
-        } else {
-            getString(R.string.my_fake_email)
-        }
+        val address = "like.asfi@gmail.com"
 
         val selectorIntent = Intent(ACTION_SENDTO)
             .setData("mailto:$address".toUri())

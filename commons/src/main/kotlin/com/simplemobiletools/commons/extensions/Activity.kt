@@ -80,7 +80,7 @@ fun Activity.appLaunched(appId: String) {
         }
     }
 
-    baseConfig.appRunCount++
+//    baseConfig.appRunCount++
     if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
         if (!resources.getBoolean(R.bool.hide_google_relations)) {
             showDonateOrUpgradeDialog()
@@ -329,11 +329,11 @@ fun Activity.launchViewIntent(url: String) {
 
 fun Activity.redirectToRateUs() {
     hideKeyboard()
-    try {
-        launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
-    } catch (ignored: ActivityNotFoundException) {
-        launchViewIntent(getStoreUrl())
-    }
+//    try {
+//        launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
+//    } catch (ignored: ActivityNotFoundException) {
+//        launchViewIntent(getStoreUrl())
+//    }
 }
 
 fun Activity.sharePathIntent(path: String, applicationId: String) {
