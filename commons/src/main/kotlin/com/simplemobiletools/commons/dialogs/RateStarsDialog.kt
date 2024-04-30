@@ -26,14 +26,14 @@ class RateStarsDialog(val activity: Activity) {
             }
         }
 
-        activity.getAlertDialogBuilder()
-            .setNegativeButton(R.string.later) { _, _ -> dialogCancelled(false) }
-            .setOnCancelListener { dialogCancelled(false) }
-            .apply {
-                activity.setupDialogStuff(view.root, this, cancelOnTouchOutside = false) { alertDialog ->
-                    dialog = alertDialog
-                }
-            }
+//        activity.getAlertDialogBuilder()
+//            .setNegativeButton(R.string.later) { _, _ -> dialogCancelled(false) }
+//            .setOnCancelListener { dialogCancelled(false) }
+//            .apply {
+//                activity.setupDialogStuff(view.root, this, cancelOnTouchOutside = false) { alertDialog ->
+//                    dialog = alertDialog
+//                }
+//            }
     }
 
     private fun dialogCancelled(showThankYou: Boolean) {

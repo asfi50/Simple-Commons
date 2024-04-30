@@ -173,11 +173,11 @@ class AboutActivity : ComponentActivity() {
     }
 
     private fun launchRateUsPrompt() {
-        if (baseConfig.wasAppRated) {
-            redirectToRateUs()
-        } else {
-            RateStarsDialog(this@AboutActivity)
-        }
+//        if (baseConfig.wasAppRated) {
+//            redirectToRateUs()
+//        } else {
+//            RateStarsDialog(this@AboutActivity)
+//        }
     }
 
     private fun onInviteClick() {
